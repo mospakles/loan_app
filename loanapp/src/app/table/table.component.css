@@ -1,0 +1,113 @@
+.container-fluid {
+    height: 100%;
+    width: 100%;
+    background-color: #f4f8fc;
+}
+
+.logo {
+    color: #5c96c2;
+    border: 2px dashed black;
+    background-color: #d6e7f4;
+    padding: 5px;
+
+    &:hover {
+        background-color: #bbd3ea;
+        color: #2b5677;
+    }
+}
+
+table {
+    width: 100%;
+    margin: 10px;
+    padding: 50px;
+
+}
+
+.tr-table {
+    font-weight: 500;
+}
+
+
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 0.2px dotted #40474c;
+    border-top: 0.2px dotted #40474c;
+    cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+    border-bottom: 1px solid #233543;
+    border-top: 1px solid #233543;
+}
+
+button {
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+
+    &:hover {
+        background-color: rgb(242, 148, 148);
+        color: red;
+    }
+}
+
+.up-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px;
+}
+
+.flight-text {
+    text-align: center;
+    padding: 10px;
+}
+
+.loader-container {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: grid;
+
+    .loader {
+        width: 100%;
+        height: 5px;
+        display: inline-block;
+        position: relative;
+        background: #1092463f;
+        overflow: hidden;
+    }
+
+    .loader::after {
+        content: '';
+        width: 96px;
+        height: 5px;
+        background: #109247;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        animation: hitZak .9s linear infinite alternate;
+    }
+
+    @keyframes hitZak {
+        0% {
+            left: 0;
+            transform: translateX(-1%);
+        }
+
+        100% {
+            left: 100%;
+            transform: translateX(-99%);
+        }
+    }
+
+}
